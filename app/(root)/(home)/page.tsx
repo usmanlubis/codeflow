@@ -9,7 +9,6 @@ export default function Home() {
 			<SignedIn>
 				<UserButton />
 			</SignedIn>
-			<h1>Yang lainnya mana?</h1>
 		</main>
 	);
 }
