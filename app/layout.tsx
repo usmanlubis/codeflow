@@ -1,3 +1,4 @@
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk as SpaceGrotesk } from 'next/font/google';
 import React from 'react';
@@ -26,8 +27,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${inter.variable} ${spaceGrotesk.variable}`}>{children}</body>
-		</html>
+		<ClerkProvider>
+			<html lang="en">
+				<body className={`${inter.variable} ${spaceGrotesk.variable}`}>{children}</body>
+			</html>
+		</ClerkProvider>
 	);
 }
