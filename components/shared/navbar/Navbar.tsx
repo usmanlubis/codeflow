@@ -1,6 +1,7 @@
 import { SignedIn, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
+import Theme from './Theme';
 
 export default function Navbar() {
 	return (
@@ -13,6 +14,7 @@ export default function Navbar() {
 			</Link>
 			GlobalTheme
 			<div className="flex-between gap-5">
+				<Theme />
 				<SignedIn>
 					<UserButton
 						appearance={{
@@ -25,7 +27,7 @@ export default function Navbar() {
 						}}
 					/>
 				</SignedIn>
-				Theme
+				MobileNav
 			</div>
 		</nav>
 	);
